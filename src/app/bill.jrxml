@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45139327-fa88-426b-9a8b-ab36f7562432">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="billno" class="java.lang.String"/>
+	<parameter name="gstno" class="java.lang.String"/>
+	<parameter name="cname" class="java.lang.String"/>
+	<parameter name="cno" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-10" width="100" height="20" uuid="1fb08fdf-7ca6-4e0c-b8e4-444cff7a973d"/>
+				<text><![CDATA[PRAVIN BATTERIES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="139" height="20" uuid="4aba05d3-2e55-4828-8894-787d635ed693"/>
+				<text><![CDATA[Customer Name and Number: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="43" height="20" uuid="737a858d-e687-459b-a03b-a31280b081e0"/>
+				<text><![CDATA[Bill NO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="25" width="43" height="20" uuid="627295e5-666a-4e1b-9afb-2f70fca3d5c2"/>
+				<text><![CDATA[GST IN: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="453" y="5" width="100" height="20" uuid="dffbaa6c-9c60-474f-8725-abe428a8f64c"/>
+				<textFieldExpression><![CDATA[$P{billno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="25" width="100" height="20" uuid="1190a1db-e63e-48d2-a929-44cb60843b1d"/>
+				<textFieldExpression><![CDATA[$P{gstno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="30" width="100" height="20" uuid="cb584ded-fe9b-4e6e-8b5a-1b0795e6280b"/>
+				<textFieldExpression><![CDATA[$P{cname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="50" width="100" height="20" uuid="19b5f12a-d053-4273-9dbc-e0064bbaaa13"/>
+				<textFieldExpression><![CDATA[$P{cno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

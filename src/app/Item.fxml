@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="988.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.itemController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" prefHeight="730.0" prefWidth="970.0">
+         <children>
+            <Label layoutX="419.0" layoutY="28.0" text="Item editor">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="98.0" text="Bar Code : ">
+               <font>
+                  <Font name="Quicksand-Regular" size="17.0" />
+               </font></Label>
+            <Label layoutX="86.0" layoutY="151.0" text="Serial No :">
+               <font>
+                  <Font name="Quicksand-Regular" size="17.0" />
+               </font></Label>
+            <Label layoutX="87.0" layoutY="199.0" text="Model Name :">
+               <font>
+                  <Font name="Quicksand-Regular" size="16.0" />
+               </font></Label>
+            <Label layoutX="86.0" layoutY="241.0" text="Warranty :">
+               <font>
+                  <Font name="Quicksand-Regular" size="16.0" />
+               </font></Label>
+            <Label layoutX="536.0" layoutY="100.0" text="HSN no:">
+               <font>
+                  <Font name="Quicksand-Regular" size="16.0" />
+               </font></Label>
+            <Label layoutX="527.0" layoutY="151.0" text="GST (Rate) :">
+               <font>
+                  <Font name="Quicksand-Regular" size="16.0" />
+               </font></Label>
+            <Label layoutX="530.0" layoutY="207.0" text="Cost Price :">
+               <font>
+                  <Font name="Quicksand-Regular" size="16.0" />
+               </font></Label>
+            <Label layoutX="816.0" layoutY="161.0" text="\%">
+               <font>
+                  <Font name="Quicksand-Regular" size="14.0" />
+               </font></Label>
+            <TableView fx:id="table" layoutX="15.0" layoutY="312.0" prefHeight="404.0" prefWidth="941.0" style="-fx-border-color: #00bcd4;">
+               <columns>
+                  <TableColumn fx:id="colid" prefWidth="40.0" text="id" />
+                  <TableColumn fx:id="colbarcode" prefWidth="136.0" text="Bar Code" />
+                  <TableColumn fx:id="colmodelno" prefWidth="146.0" text="Serial No " />
+                  <TableColumn fx:id="colmodelname" prefWidth="169.0" text="Model Name" />
+                  <TableColumn fx:id="colwarranty" prefWidth="112.0" text="Warranty" />
+                  <TableColumn fx:id="colhsn" prefWidth="94.0" text="HSN " />
+                  <TableColumn fx:id="colgst" prefWidth="63.0" text="GST" />
+                  <TableColumn fx:id="colcostprc" prefWidth="180.0" text="Cost price" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="barcode" focusColor="#00e5ff" labelFloat="true" layoutX="203.0" layoutY="95.0" promptText="Enter Barcode" unFocusColor="#00bcd4">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="modelname" focusColor="#00e5ff" labelFloat="true" layoutX="203.0" layoutY="192.0" unFocusColor="#00bcd4">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="warranty" focusColor="#00e5ff" labelFloat="true" layoutX="203.0" layoutY="236.0" unFocusColor="#00bcd4">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="hsn" focusColor="#00e5ff" labelFloat="true" layoutX="626.0" layoutY="95.0" unFocusColor="#00bcd4">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="gst" focusColor="#00e5ff" labelFloat="true" layoutX="634.0" layoutY="147.0" unFocusColor="#00bcd4">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="costprice" focusColor="#00e5ff" labelFloat="true" layoutX="634.0" layoutY="202.0" unFocusColor="#00bcd4">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="addbtn" buttonType="RAISED" layoutX="505.0" layoutY="266.0" onAction="#addItem" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: #00bcd4;" text="Add item">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/plus-circle-outline.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="refreshbtn" buttonType="RAISED" layoutX="620.0" layoutY="266.0" onAction="#refreshItem" prefHeight="32.0" prefWidth="86.0" style="-fx-background-color: #00bcd4;" text="Refresh">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="deletebtn" buttonType="RAISED" layoutX="729.0" layoutY="266.0" onAction="#deleteItem" prefHeight="32.0" prefWidth="93.0" style="-fx-background-color: #00bcd4;" text="Remove">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXComboBox fx:id="modelno" focusColor="#00e5ff" layoutX="203.0" layoutY="148.0" prefHeight="26.0" prefWidth="171.0" promptText="Select Model" unFocusColor="#00bcd4" />
+            <JFXButton fx:id="editBtn" buttonType="RAISED" layoutX="841.0" layoutY="268.0" onAction="#editItem" prefHeight="18.0" prefWidth="86.0" style="-fx-background-color: #00bcd4;" text="EDIT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/plus-circle-outline.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

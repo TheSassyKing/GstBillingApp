@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="730.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.reportController">
+   <children>
+      <Label layoutX="453.0" layoutY="14.0" text="Reporter">
+         <font>
+            <Font name="Quicksand-Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="42.0" fitWidth="45.0" layoutX="403.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/file-chart.png" />
+         </image>
+      </ImageView>
+      <JFXTabPane layoutX="10.0" layoutY="58.0" prefHeight="672.0" prefWidth="968.0" stylesheets="@tabstyle.css">
+         <tabs>
+            <Tab text="Invoice Viewer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="360.0">
+                     <children>
+                        <Text layoutX="163.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter : ">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="inv_bar" focusColor="#00e5ff" labelFloat="true" layoutX="307.0" layoutY="27.0" prefHeight="42.0" prefWidth="355.0" promptText="Search by Invoice No" unFocusColor="#00bcd4">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <Text layoutX="14.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Date:" wrappingWidth="132.16799926757812">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="inv_from_date" layoutX="163.0" layoutY="83.0" />
+                        <Text layoutX="382.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Date:" wrappingWidth="109.16799926757812">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="inv_to_date" layoutX="500.0" layoutY="83.0" />
+                        <JFXButton fx:id="date_sch_btn" buttonType="RAISED" layoutX="724.0" layoutY="77.0" onAction="#btwDate" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: #00bcd4;" text="Search">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/magnify.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <TableView fx:id="tableview" layoutX="9.0" layoutY="143.0" prefHeight="471.0" prefWidth="946.0">
+                          <columns>
+                            <TableColumn fx:id="col_invno" prefWidth="85.0" text="invoice No" />
+                            <TableColumn fx:id="col_date" prefWidth="177.0" text="invoice Date" />
+                              <TableColumn fx:id="col_name" prefWidth="126.0" text="Customer Name" />
+                              <TableColumn fx:id="col_no" prefWidth="137.0" text="Costomer No" />
+                              <TableColumn fx:id="col_amt" prefWidth="126.0" text="Total Amt" />
+                              <TableColumn fx:id="col_tax" prefWidth="143.0" text="Total Tax (GST)" />
+                              <TableColumn fx:id="col_prc" prefWidth="151.0" text="Cost price" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Tax Finder">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Date:" wrappingWidth="132.16799926757812">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="tax_from_date" layoutX="158.0" layoutY="30.0" />
+                        <Text layoutX="374.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Date:" wrappingWidth="109.16799926757812">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="tax_to_date" layoutX="484.0" layoutY="29.0" />
+                        <JFXButton fx:id="date_searchBtn" buttonType="RAISED" layoutX="716.0" layoutY="25.0" onAction="#taxbtwDate" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: #00bcd4;" text="Search">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/magnify.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label layoutX="167.0" layoutY="277.0" prefHeight="120.0" prefWidth="222.0" text="Total Tax :">
+                           <font>
+                              <Font name="Quicksand-Regular" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totTax" layoutX="523.0" layoutY="277.0" prefHeight="108.0" prefWidth="394.0" text="000.0">
+                           <font>
+                              <Font name="Quicksand-Regular" size="66.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="120.0" fitWidth="116.0" layoutX="407.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rupee.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="66.0" layoutY="159.0" prefHeight="120.0" prefWidth="325.0" text="Total Sells Amt :">
+                           <font>
+                              <Font name="Quicksand-Regular" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sellsamt" layoutX="525.0" layoutY="159.0" prefHeight="108.0" prefWidth="394.0" text="000.0">
+                           <font>
+                              <Font name="Quicksand-Regular" size="66.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="120.0" fitWidth="116.0" layoutX="409.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rupee.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Profit/Loss Finder">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="21.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Date:" wrappingWidth="132.16799926757812">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="pol_from_date" layoutX="165.0" layoutY="44.0" />
+                        <Text layoutX="380.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Date:" wrappingWidth="109.16799926757812">
+                           <font>
+                              <Font name="Quicksand-Regular" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="pol_to_Date" layoutX="499.0" layoutY="38.0" />
+                        <JFXButton fx:id="pol_searchBtn" buttonType="RAISED" layoutX="722.0" layoutY="32.0" onAction="#polbtwDate" prefHeight="42.0" prefWidth="101.0" style="-fx-background-color: #00bcd4;" text="Search">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/magnify.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="polabel" layoutX="415.0" layoutY="180.0" prefHeight="100.0" prefWidth="307.0" text="PROFIT" textFill="#ff0707">
+                           <font>
+                              <Font size="39.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="profit_img" fitHeight="156.0" fitWidth="141.0" layoutX="87.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/like-512.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="loss_img" fitHeight="150.0" fitWidth="200.0" layoutX="682.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/thumbs-down-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="tot_amt" layoutX="463.0" layoutY="361.0" prefHeight="50.0" prefWidth="139.0" text="000.0">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="mop_label" layoutX="380.0" layoutY="349.0" text="+">
+                           <font>
+                              <Font size="51.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="59.0" fitWidth="53.0" layoutX="408.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/rupee.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

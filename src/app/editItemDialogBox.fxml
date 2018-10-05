@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.editDialogController">
+   <children>
+      <Label layoutX="89.0" layoutY="33.0" text="Edit Item Details">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="UpdateBtn" buttonType="RAISED" layoutX="107.0" layoutY="476.0" onAction="#updateDetails" prefHeight="32.0" prefWidth="188.0" style="-fx-background-color: #00bcd4;" text="UPDATE ITEM">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/plus-circle-outline.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="32.0" layoutY="110.0" text="Bar Code : ">
+         <font>
+            <Font name="Quicksand-Regular" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="158.0" text="Serial No :">
+         <font>
+            <Font name="Quicksand-Regular" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="207.0" text="Model Name :">
+         <font>
+            <Font name="Quicksand-Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="251.0" text="Warranty :">
+         <font>
+            <Font name="Quicksand-Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="291.0" text="HSN no:">
+         <font>
+            <Font name="Quicksand-Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="339.0" text="GST (Rate) :">
+         <font>
+            <Font name="Quicksand-Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="394.0" text="Cost Price :">
+         <font>
+            <Font name="Quicksand-Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="349.0" text="\%">
+         <font>
+            <Font name="Quicksand-Regular" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="barcode" focusColor="#00e5ff" labelFloat="true" layoutX="177.0" layoutY="106.0" promptText="Enter Barcode" unFocusColor="#00bcd4">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="modelname" focusColor="#00e5ff" labelFloat="true" layoutX="177.0" layoutY="202.0" unFocusColor="#00bcd4">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="warranty" focusColor="#00e5ff" labelFloat="true" layoutX="177.0" layoutY="246.0" unFocusColor="#00bcd4">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="hsn" focusColor="#00e5ff" labelFloat="true" layoutX="177.0" layoutY="286.0" unFocusColor="#00bcd4">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="gst" focusColor="#00e5ff" labelFloat="true" layoutX="177.0" layoutY="334.0" unFocusColor="#00bcd4">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="costprice" focusColor="#00e5ff" labelFloat="true" layoutX="177.0" layoutY="380.0" unFocusColor="#00bcd4">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="modelno" focusColor="#00e5ff" layoutX="173.0" layoutY="153.0" prefHeight="26.0" prefWidth="171.0" promptText="Select Model" unFocusColor="#00bcd4" />
+   </children>
+</AnchorPane>

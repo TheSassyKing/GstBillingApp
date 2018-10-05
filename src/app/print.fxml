@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="printPane" prefHeight="770.0" prefWidth="627.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.printController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="760.0" layoutX="6.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="618.0" />
+      <Text layoutX="249.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TAX INVOICE" />
+      <Text layoutX="25.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRAVIN BATTERY" wrappingWidth="167.4528045654297">
+         <font>
+            <Font name="Cooper Black" size="15.0" />
+         </font></Text>
+      <Text layoutX="22.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name &amp; No:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <Label fx:id="name" layoutX="22.0" layoutY="89.0" text="name" />
+      <Label fx:id="no" layoutX="23.0" layoutY="110.0" text="number" />
+      <Label layoutX="323.0" layoutY="57.0" text="GST IN: " />
+      <Label layoutX="387.0" layoutY="57.0" text="33BYSPP9279H1ZI" />
+      <Label fx:id="date" layoutX="390.0" layoutY="78.0" prefHeight="21.0" prefWidth="87.0" text="date" />
+      <Label fx:id="invno" layoutX="387.0" layoutY="99.0" prefHeight="21.0" prefWidth="117.0" text="no" />
+      <Text layoutX="322.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE:" />
+      <Text layoutX="322.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BILL NO:" />
+      <Text layoutX="249.0" layoutY="694.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="total" layoutX="333.0" layoutY="667.0" prefHeight="35.0" prefWidth="148.0" text="RS. 0000">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="390.0" layoutY="19.0" mnemonicParsing="false" onAction="#a" text="Print" />
+      <TableView fx:id="tableView" layoutX="13.0" layoutY="140.0" prefHeight="513.0" prefWidth="608.0">
+        <columns>
+          <TableColumn fx:id="colitemname" prefWidth="82.0" text="Item" />
+          <TableColumn fx:id="colqty" prefWidth="41.0" text="Qty" />
+            <TableColumn fx:id="colprice" prefWidth="67.0" text="Price" />
+            <TableColumn fx:id="colwrt" prefWidth="60.0" text="WRTY" />
+            <TableColumn fx:id="colhsn" prefWidth="45.0" text="HSN" />
+            <TableColumn prefWidth="114.0" text="CGST">
+               <columns>
+                  <TableColumn fx:id="colcrate" prefWidth="40.0" text="Rate" />
+                  <TableColumn fx:id="colcamt" minWidth="5.0" prefWidth="60.0" text="Amt" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="110.0" text="SGST">
+               <columns>
+                  <TableColumn fx:id="colsrate" prefWidth="40.0" text="Rate" />
+                  <TableColumn fx:id="colsamt" minWidth="2.66668701171875" prefWidth="60.0" text="Amt" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="coltotal" prefWidth="131.0" text="Total" />
+        </columns>
+      </TableView>
+      <Text layoutX="24.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No.C-62, M.G.R. Rd, Hindu Colony, Nanganallur, Chennai, Tamil Nadu 600061" wrappingWidth="210.17920800298452">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

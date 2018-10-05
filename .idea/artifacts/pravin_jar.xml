@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pravin:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pravin_jar</output-path>
+    <root id="archive" name="pravin.jar">
+      <element id="module-output" name="pravin" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../jasperreports-6.5.1-project/jasperreports-6.5.1/dist/jasperreports-6.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../jasperreports-6.5.1-project/jasperreports-6.5.1/dist/jasperreports-javaflow-6.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../jasperreports-6.5.1-project/jasperreports-6.5.1/dist/jasperreports-fonts-6.5.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/itext-4.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Compressed/commons-digester-2.1.jar/commons-digester-2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/sqlite-jdbc-3.21.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Compressed/commons-collections-3.2.1-1.0.0.jar/commons-collections-3.2.1-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jasper-compiler-jdt-5.5.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jfoenix-8.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Compressed/commons-dbutils-1.5.jar/commons-dbutils-1.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Compressed/Convert_To_WordJasper_Plugin/Convert-To-WordJasper-Plugin/Jar File/ConvertToWordPlugin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Compressed/controlsfx-8.40.14/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Compressed/commons-beanutils-1.8.3.jar/commons-beanutils-1.8.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1184.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
+   <children>
+      <VBox maxWidth="-Infinity" prefHeight="730.0" prefWidth="166.0" style="-fx-background-color: #ffffff; -fx-border-color: #00bcd4;">
+         <children>
+            <Pane prefHeight="71.0" prefWidth="170.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <Pane layoutX="-1.0" prefHeight="68.0" prefWidth="166.0" style="-fx-background-color: #00bcd4;">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/car-battery.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="76.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PB">
+                           <font>
+                              <Font name="AR DELANEY" size="45.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" onAction="#ButtonBilling" prefHeight="49.0" prefWidth="170.0" ripplerFill="WHITE" styleClass="hover_border" text="Billing" textAlignment="CENTER" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/newspaper.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Quicksand-Regular" size="23.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="60.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#ButtonItem" prefHeight="49.0" prefWidth="170.0" ripplerFill="WHITE" styleClass="hover_border" text="Add Item" textAlignment="CENTER" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/cart-plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Quicksand-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#ButtonModel" prefHeight="49.0" prefWidth="170.0" ripplerFill="WHITE" styleClass="hover_border" text="Add Model" textAlignment="CENTER" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/library-plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Quicksand-Regular" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#ButtonStock" prefHeight="49.0" prefWidth="170.0" ripplerFill="WHITE" styleClass="hover_border" text="Stock" textAlignment="CENTER" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/history.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Quicksand-Regular" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#ButtonReport" prefHeight="49.0" prefWidth="170.0" ripplerFill="WHITE" styleClass="hover_border" text="Report" textAlignment="CENTER" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/chart-histogram.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Quicksand-Regular" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#exit" prefHeight="49.0" prefWidth="110.0" ripplerFill="#0cb8da" style="-fx-background-color: #b3e5fc;" text="EXIT" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/door-closed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="60.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="anchorPanel1" layoutX="166.0" prefHeight="730.0" prefWidth="1014.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Label layoutX="183.0" layoutY="44.0" text="PRAVIN BATTERY">
+               <textFill>
+                  <RadialGradient centerX="0.4022222306993273" centerY="0.4923664194936971" radius="0.9579438895822685">
+                     <stops>
+                        <Stop color="#004954" />
+                        <Stop color="#4c0808" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+               <font>
+                  <Font name="AR DELANEY" size="76.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="393.0" fitWidth="607.0" layoutX="186.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/img2.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

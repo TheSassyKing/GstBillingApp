@@ -1,0 +1,13 @@
+.tab {
+    -fx-pref-width: 315;
+    -fx-pref-height: 50 ;
+    -fx-font-size: 18;
+
+
+}
+
+.tab-header-text {
+    -fx-font-size: 18;
+    -fx-text-fill: BLACK;
+}
+
